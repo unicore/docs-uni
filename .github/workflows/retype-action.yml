@@ -1,0 +1,27 @@
+name: Publish DOCS to GitHub Pages
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    name: Publish to GitHub Pages
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: retypeapp/action-build@latest
+
+      - name: Publish Core website to GitHub Pages
+        uses: retypeapp/action-github-pages@latest
+        with:
+          update-branch: true
+          branch: docs
+

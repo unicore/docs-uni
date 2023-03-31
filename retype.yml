@@ -1,0 +1,53 @@
+input: .
+output: .retype
+url: uni.intellect.run
+branding:
+  title: UNI
+  label: blockchain
+  logo: "static/logo.png"
+  logoDark: 
+  logoAlign: right
+generator:
+  recase: all
+links:
+- text: Блокчейн UNI
+  link: https://docs.intellect.run
+- text: Контракты CORE
+  link: https://docs.intellect.run/unicore
+- text: Платформа DAO
+  link: https://docs.intellect.run/dao
+- text: Обозреватель
+  link: https://explorer.intellect.run
+- text: GitHub
+  link: https://github.com/unicore
+
+meta:
+  title: " | DAO Коллективного Разума"
+
+footer:
+  copyright: "создано в DAO Коллективного Разума &copy; Copyright {{ year }}. All rights reserved."
+  links:
+    - text: UNI
+      link: https://docs.intellect.run
+    - text: UNICORE
+      link: https://docs.intellect.run/unicore
+    - text: UNIDAO
+      link: https://docs.intellect.run/dao
+    
+    # - text: GitHub
+    #   link: https://github.com/unicore
+      
+    # - text: UNICORE
+    #   link: /
+    # - text: UNIBOT
+    #   link: /
+    # - text: UNIDOME
+    #   link: /
+edit:
+  repo: "https://github.com/unicore/docs/edit"
+  base: /uni
+  branch: master
+  label: редактировать
+
+server:
+  host: 127.0.0.1:5005

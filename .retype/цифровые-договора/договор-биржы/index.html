@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-root" content="/uni">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.731684546564">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 2.3.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Договор биржы | DAO Коллективного Разума</title>
+    <meta name="title" content="Договор биржы | DAO Коллективного Разума">
+    <meta name="description" content="C/C++, eosio.cdt 1.7.0" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.intellect.run/uni/цифровые-договора/договор-биржы/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.intellect.run/uni/цифровые-договора/договор-биржы/">
+    <meta property="og:title" content="Договор биржы | DAO Коллективного Разума">
+    <meta property="og:description" content="C/C++, eosio.cdt 1.7.0">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://docs.intellect.run/uni/цифровые-договора/договор-биржы/">
+    <meta property="twitter:title" content="Договор биржы | DAO Коллективного Разума">
+    <meta property="twitter:description" content="C/C++, eosio.cdt 1.7.0">
+
+    <script>(function () { var el = document.documentElement, m = localStorage.getItem("/uni/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="../../resources/css/retype.css?v=2.3.0.731684546564" rel="stylesheet" />
+
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.731684546564" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.731684546564" data-turbo-eval="false" defer></script>
+</head>
+<body>
+    <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between grow pr-6 md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="docs-sidebar-toggle"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">UNI</span>
+                            <span class="w-10 ml-2 grow-0 shrink-0 overflow-hidden">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../static/logo.png">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../static/logo.png">
+                            </span>
+                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">DAO</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/создать-хост/">Создать DAO</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/uni">Блокчейт UNI</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/unicore">Github</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+        
+                            <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
+                            style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search" />
+                        </div>
+        
+                        <!-- Mobile search button mock -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placehokder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button mock -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="docs-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <!-- Render this div, if config.showSidebarFilter is `true` -->
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter" />
+                </div>
+            
+                <div class="pl-6 mb-4 mt-1">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/создать-хост/">Создать DAO</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/uni">Блокчейт UNI</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/unicore">Github</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div class="grow min-w-0 px-6 md:px-16">
+                        <main class="relative pt-6 pb-16">
+                            <div class="docs-markdown" id="docs-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="docs-sidebar-right-toggle"></div>
+                
+                                <!-- Page content  -->
+<doc-anchor-target id="договор-биржы" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#договор-биржы">#</doc-anchor-trigger>
+        <span>Договор биржы</span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="стек">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#стек">#</doc-anchor-trigger>
+        <span>Стек</span>
+    </h2>
+</doc-anchor-target>
+<p>C/C++, eosio.cdt 1.7.0</p>
+<doc-anchor-target id="введение">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#введение">#</doc-anchor-trigger>
+        <span>Введение</span>
+    </h2>
+</doc-anchor-target>
+<p>Контракт обеспечивает обмен токенами между двумя пользователями системы с участием гаранта. Создавая ордер типа sell, токены продавца блокируются в контракте и передаются покупателю после подтверждения завершения сделки.</p>
+<p>Каждый ордер, не обладающий родителем, готов принимать предложения о сделках в дочерних ордерах противоположного типа. Так, если родительский ордер типа buy, то он готов принимать предложения от ордеров с типом sell, и наоборот. Обмен производится по курсу относительно системной опорной валюты (USD).</p>
+<p>В процессе обмена всегда задействованы три типа валют:</p>
+<ul>
+<li>root_asset - токен обмена, который предоставляет продавец для блокировки в контракте и получает покупатель после завершения сделки.</li>
+<li>quote_asset - опорный токен, который используется для расчёта количества валюты выхода.</li>
+<li>out_asset - токен выхода, который получает продавец и отправляет покупатель на реквизиты продавца.</li>
+</ul>
+<doc-anchor-target id="компиляция">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#компиляция">#</doc-anchor-trigger>
+        <span>Компиляция</span>
+    </h2>
+</doc-anchor-target>
+<p>Заменить ABSOLUTE_PATH_TO_CONTRACT на абсолютный путь к директории контракта p2p.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">docker run --rm --name eosio.cdt_v1.7.0 --volume /ABSOLUTE_PATH_TO_CONTRACT:/project -w /project eostudio/eosio.cdt:v1.7.0 /bin/bash -c &quot;eosio-cpp -abigen -I include -R include -contract p2p -o p2p.wasm p2p.cpp&quot; &amp;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="генерация-документации">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#генерация-документации">#</doc-anchor-trigger>
+        <span>Генерация документации</span>
+    </h2>
+</doc-anchor-target>
+<p>Требуется Doxygen версии от 1.9.3</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">git submodule update --init --recursive
+doxygen</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="установка">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#установка">#</doc-anchor-trigger>
+        <span>Установка</span>
+    </h2>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cleos set contract p2p ABSOLUTE_PATH_TO_CONTRACT -p p2p</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="применение">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#применение">#</doc-anchor-trigger>
+        <span>Применение</span>
+    </h2>
+</doc-anchor-target>
+<p>Контракт может использоваться:</p>
+<ul>
+<li>как p2p биржа обмена любым стандартным заменяемым цифровым активом;</li>
+<li>как точка реализации токена компанией (IDO), которая не исключает возможность перепродаж токенов пользователями;</li>
+<li>как касса взаимопомощи, где только те пользователи могут получить валюту выхода на свои реквизиты, которые обладают токенами обмена;
+Во всех вариантах каждый хост цифровой экономики на аккаунте _core может создать дополнительный стимул на продаже собственных токенов, активировав партнёрскую программу. Для этого, он должен пополнить бонусный баланс контракта и установить бонусный курс, который будет использоваться при расчёте вознаграждений по структуре покупателя по формуле:</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">КОЛИЧЕСТВО_ТОКЕНОВ_ПАРТНЁРАМ_ПОКУПАТЕЛЯ = КОЛИЧЕСТВО_ТОКЕНОВ_В_УСПЕШНОЙ_СДЕЛКЕ_У_ПРОДАВЦА * БОНУСНЫЙ_КУРС_ПРОДАВЦА</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="действующие-аккаунты">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#действующие-аккаунты">#</doc-anchor-trigger>
+        <span>Действующие аккаунты</span>
+    </h2>
+</doc-anchor-target>
+<p>me - собственное имя контракта;
+curator - дефолтный оракул, используемый во всех сделках;
+rater - имя аккаунта поставщика курсов обмена;
+core - имя аккаунта, распределяющего партнерское вознаграждение;</p>
+<doc-anchor-target id="основные-управляющие-параметры">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#основные-управляющие-параметры">#</doc-anchor-trigger>
+        <span>Основные управляющие параметры</span>
+    </h2>
+</doc-anchor-target>
+<p>ENABLE_GROWHT = TRUE - допускает изменение курса системного токена в процентном соотношении от стартового курса (линейный рост)
+START_RATE - стартовый курс системного токена, используемый при расчёте линейного роста;
+PERCENTS_PER_MONTH - устанавливает скорость роста системного токена;
+ENABLE_VESTING - включает режим продаж через вестинг равными долями от момента создания объекта;
+VESTING_SECONDS - продолжительность вестинга;
+CORE_SALE_ACCOUNT - аккаунт компании, осуществляющий IDO, продажа от которого проходит с применением вестинга. Все остальные аккаунты совершают сделки без вестинга;
+GIFT_ACCOUNT_FROM_AMOUNT - если покупка совершается у компании на сумму, превышающую в этом поле, то компания совершает выкуп прав владельца аккаунта у регистратора и передаёт их пользователю (переводит аккаунт из статуса гость в статус партнёр).</p>
+<doc-anchor-target id="роли">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#роли">#</doc-anchor-trigger>
+        <span>Роли</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Продавец - создаёт ордер типа sell</li>
+<li>Покупатель - создаёт ордер типа buy</li>
+<li>Оракул - разрешает споры между партнёрами</li>
+<li>Поставщик курса - поставляет курс валют выхода</li>
+<li>Системный поставщик курса - поставляет курс системной валюты</li>
+</ul>
+<doc-anchor-target id="сценарии">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#сценарии">#</doc-anchor-trigger>
+        <span>Сценарии</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="пополнение-собственного-баланса">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#пополнение-собственного-баланса">#</doc-anchor-trigger>
+        <span>Пополнение собственного баланса</span>
+    </h3>
+</doc-anchor-target>
+<p>Для того, чтобы иметь возможность создать ордер на продажу, необходимо обладать балансом на контракте. Для этого, необходимо совершить перевод на имя аккаунта контракта без дополнительных параметров в поле memo:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cleos transfer username p2p &quot;100.0000 FLOWER&quot;</code></pre>
+</doc-codeblock></div>
+<p>Проверить собственный баланс с помощью команды:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cleos get table p2p username balance</code></pre>
+</doc-codeblock></div>
+<p>Ответ содержит имя контракта и количество токенов, доступных к сделке продажи:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">&quot;rows&quot;: [{
+      &quot;id&quot;: 0,
+      &quot;contract&quot;: &quot;eosio.token&quot;,
+      &quot;quantity&quot;: &quot;100.0000 FLOWER&quot;
+    }
+  ],</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="пополнение-бонусного-баланса">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#пополнение-бонусного-баланса">#</doc-anchor-trigger>
+        <span>Пополнение бонусного баланса</span>
+    </h3>
+</doc-anchor-target>
+<p>Для пополнения бонусного баланса необходимо совершить перевод на собственное имя аккаунта контракта с указанием в поле memo имени аккаунта, который активирует бонусную систему. Бонусная система доступна только хостам цифровых экономик в контракте core. Аккаунты, не обладающие статусом хоста в контракте core не смогут распределить бонусные токены на структуру покупателя.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cleos transfer username p2p &quot;100.0000 FLOWER&quot; &quot;username&quot;</code></pre>
+</doc-codeblock></div>
+<p>Проверить бонусный баланс с помощью команды:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cleos get table p2p p2p bbonuses</code></pre>
+</doc-codeblock></div>
+<p>Ответ содержит имена аккаунтов хостов и их бонусные балансы:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">&quot;rows&quot;: [{
+      &quot;host&quot;: &quot;alexant&quot;,
+      &quot;contract&quot;: &quot;eosio.token&quot;,
+      &quot;total&quot;: &quot;200.0000 FLOWER&quot;,
+      &quot;available&quot;: &quot;200.0000 FLOWER&quot;,
+      &quot;distributed&quot;: &quot;0.0000 FLOWER&quot;,
+      &quot;distribution_rate&quot;: &quot;0.00000000000000000&quot;
+    },{
+      &quot;host&quot;: &quot;core&quot;,
+      &quot;contract&quot;: &quot;eosio.token&quot;,
+      &quot;total&quot;: &quot;10000.0000 FLOWER&quot;,
+      &quot;available&quot;: &quot;9900.0000 FLOWER&quot;,
+      &quot;distributed&quot;: &quot;100.0000 FLOWER&quot;,
+      &quot;distribution_rate&quot;: &quot;1.00000000000000000&quot;
+    }
+  ],</code></pre>
+</doc-codeblock></div>
+<p>При повторном пополнении бонусного баланса, соответствующие токены суммируются.</p>
+<doc-anchor-target id="активация-бонусной-системы">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#активация-бонусной-системы">#</doc-anchor-trigger>
+        <span>Активация бонусной системы</span>
+    </h3>
+</doc-anchor-target>
+<p>Для активации бонусной системы, аккаунт должен обладать статусом активного хоста в контракте core с установленными параметрами распределения по уровням пользователей. Для того, чтобы в момент продажи бонусные токены распределились среди партнёров покупателя, необходимо установить бонусный курс распределения:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cleos push action p2p setbrate '[username, 1]' -p username </code></pre>
+</doc-codeblock></div>
+<p>Где 1 - это бонусный курс, который распределяет на партнёров покупателя в точности ту сумму (если она доступна в бонусном балансе хоста), которая находилась в сделке. При установке 0 - распределение бонусных токенов останавливается.</p>
+<doc-anchor-target id="продажа">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#продажа">#</doc-anchor-trigger>
+        <span>Продажа</span>
+    </h3>
+</doc-anchor-target>
+<p>Создавая ордер на продажу, продавец указывает валюту выхода, которую намерен получить от покупателя и курс к опорной валюте (USD), по которому готов осуществить продажу, а также реквизиты для получения валюты выхода. В момент создания ордера на продажу, контракт блокирует токены продавца, после чего, вывести их из блокировки можно только в случае отмены ордера (метод cancel), завершения сделки (метод approve), или разрешения открытого спора. После создания ордера, продавец ожидает встречного ордера от покупателя.</p>
+<p>Покупатель создаёт встречный ордер, фиксируя курс валюты выхода на этот момент. После получения встречного ордера, продавец должен подтвердить своё присутствие и условия обмена. Встречный курс обмена в дочернем ордере может отличаться от того, что был заявлен продавцом.</p>
+<p>Если встречные условия продавца устраивают, то он подтверждает начало сделки методом accept с передачей зашифрованных реквизитов для перевода валюты выхода покупателю. После вызова метода accept продавцом, статус дочернего ордера меняется на process. Статус родительского ордера продавца находится в waiting и не изменяется до момента полной реализации токенов.</p>
+<p>Теперь, покупатель должен осуществить перевод валюты выхода на реквизиты продавца. Совершив перевод, продавец подтверждает факт отправки средств вызовом метода confirm с указанием идентификатора своего ордера, что меняет статус ордера на payed. Теперь, продавец должен подтвердить факт получения валюты выхода на свои реквизиты, вызовом метода approve с указанием идентификатором встречного ордера. При получении транзакции с действием approve от продавца, происходит разблокировка токенов обмена в пользу покупателя.</p>
+<doc-anchor-target id="покупка">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#покупка">#</doc-anchor-trigger>
+        <span>Покупка</span>
+    </h3>
+</doc-anchor-target>
+<p>Создавая ордер на покупку, покупатель указывает валюту выхода, которую намер получить от продавца и курс к опорной валюте (USD), по которому готов осуществить покупку. После создания ордера на покупку, покупатель ожидает появления встречного ордера от продавца.</p>
+<p>Продавец создаёт встречный ордер, фиксируя курс валюты выхода на этот момент и передаёт зашифрованные реквизиты покупателю. Контракт, при этом, блокирует его токены обмена до момента завершения сделки (метод approve), отмены (метод cancel) или разрешения открытого спора.</p>
+<p>Если встречные условия устраивают покупателя, то он подтверждает начало сделки методом accept, после чего, статус дочернего ордера меняется на process. Статус родительского ордера покупателя находится в waiting и не изменяется до момента реализации токенов.</p>
+<p>Теперь, покупатель должен осуществить передачу валюты выхода на реквизиты, предоставленные продавцом. После передачи, покупатель подтверждает этот факт вызовом метода confirm, а дочерний ордер переходит в статус payed, статус родительского ордера при этом не изменяется.</p>
+<p>После получения оплаты в валюте выхода на свои реквизиты, покупатель должен вызвать метод approve с указанием идентификатора встречного ордера. При получении транзакции с подтверждением о получении валюты выхода от продавца, контракт разблокирует токены обмена в пользу покупателя.</p>
+<doc-anchor-target id="разрешение-споров">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#разрешение-споров">#</doc-anchor-trigger>
+        <span>Разрешение споров</span>
+    </h3>
+</doc-anchor-target>
+<p>TODO реализовать метод и логику разрешения споров.</p>
+<doc-anchor-target id="частичный-обмен">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#частичный-обмен">#</doc-anchor-trigger>
+        <span>Частичный обмен</span>
+    </h3>
+</doc-anchor-target>
+<p>Количество токенов на обмене, которые хочет получить покупатель, могут отличаться в меньшую сторону от заявки продавца. В этом случае, произойдёт срабатывание ордера только на сумму обмена, а остаток останется в ордере продавца для обмена с другими покупателями.</p>
+<doc-anchor-target id="обновление-опорных-курсов">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#обновление-опорных-курсов">#</doc-anchor-trigger>
+        <span>Обновление опорных курсов</span>
+    </h3>
+</doc-anchor-target>
+<p>Контракт содержит опорные курсы конвертации валют выхода к опорной валюте (USD), которые поставляются специальным аккаунтом поставщика из внешних источников (rater).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cleos push action p2p setrate '[&quot;&quot;, &quot;0.0000 RUB&quot;, 0.0133]' -p rater</code></pre>
+</doc-codeblock></div>
+<p>Для получения курсов валют выхода вызываем команду:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cleos get table p2p p2p usdrates</code></pre>
+</doc-codeblock></div>
+<p>В ответе увидим:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">&quot;rows&quot;: [{
+      &quot;id&quot;: 0,
+      &quot;out_contract&quot;: &quot;&quot;,
+      &quot;out_asset&quot;: &quot;0.0000 RUB&quot;,
+      &quot;rate&quot;: &quot;0.01330000000000000&quot;,
+      &quot;updated_at&quot;: &quot;2021-12-30T13:34:31&quot;
+    }]</code></pre>
+</doc-codeblock></div>
+<p>Где 0.0133 - это курс RUB / USD, что соответствует 75,1879 USD / RUB. ВАЖНО! Обращаем внимание, что курсы поставляются в базе к USD, что часто соответствует обратным значением к тем, которые привычны.</p>
+<p>TODO На текущий момент, поставщик курсов один, в дальнейшем реализовать скользящую среднюю курсов на 14 дней от 21 делегата.</p>
+<doc-anchor-target id="обновление-курса-системного-токена">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#обновление-курса-системного-токена">#</doc-anchor-trigger>
+        <span>Обновление курса системного токена</span>
+    </h3>
+</doc-anchor-target>
+<p>Обновление курс системного токена производится системным аккаунтом eosio раз в минуту, если этот режим активирован с его стороны. В любом случае, для того, чтобы изменить курс реализации системного токена на продаже, необходимо вызвать метод uprate:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cleos push action p2p uprate '[&quot;eosio.token&quot;, &quot;0.0000 FLOWER&quot;]' -p eosio</code></pre>
+</doc-codeblock></div>
+<p>Расчёт изменений курса будет отображен в таблице usdrates. Курс обмена увеличится на линейную величину в соотстветствии с процентом роста PERCENTS_PER_MONTH и стартовым курсом START_RATE.</p>
+<p>Системный курс используется в веб-терминале при активированном режиме продаж системного токена, что отключает для пользователей визуальную возможность редактирования курса обмена, а все обмены производятся по установленному системному курсу на момент получения встречного ордера.</p>
+<doc-anchor-target id="шифрование-реквизитов">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#шифрование-реквизитов">#</doc-anchor-trigger>
+        <span>Шифрование реквизитов</span>
+    </h3>
+</doc-anchor-target>
+<p>Реквизиты передаются через блокчейн в зашифрованном виде по протоколу Диффи-Хеллмана, при котором, шифрование происходит с участием приватного ключа отправителя и публичного ключа получателя. Таким образом, только им двоим доступны зашифрованные реквизиты, поскольку расшифровка доступна как с помощью приватного ключа отправителя, так и с помощью приватного ключа получателя.</p>
+<doc-anchor-target id="документация-к-методам-и-таблицам-контракта">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#документация-к-методам-и-таблицам-контракта">#</doc-anchor-trigger>
+        <span>Документация к методам и таблицам контракта</span>
+    </h3>
+</doc-anchor-target>
+<p>Документация к методам и таблицам контракта доступна в папке docs/html/index.html</p>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results />
+                            </div>
+                            <footer class="clear-both">
+                                <div class="flex flex-wrap items-center justify-between mt-14">
+                                    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/unicore/docs/edit/master/unidao/Цифровые договора/Договор биржы.md" target="_blank" rel="noopener">
+                                        <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        <span>редактировать</span>
+                                    </a>
+                                </div>
+                            
+                            </footer>
+                        </main>
+                
+                        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between">
+                                <div>
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                        <li>
+                                            <a class="block mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="../../">UNI</a>
+                                        </li>
+                                        <li>
+                                            <a class="block mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="../../">UNICORE</a>
+                                        </li>
+                                        <li>
+                                            <a class="block mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="../../">UNIDAO</a>
+                                        </li>
+                                        <li>
+                                            <a class="block mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="../../">UNIBOT</a>
+                                        </li>
+                                        <li>
+                                            <a class="block mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="../../">UNIDOME</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>создано в DAO Коллективного Разума © Copyright 2023. All rights reserved.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="docs-overlay-target"></div>
+
+    <script>window.__DOCS__ = { "title": "Договор биржы", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+</body>
+</html>
