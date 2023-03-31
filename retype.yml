@@ -11,13 +11,13 @@ generator:
   recase: all
 links:
 - text: Блокчейн UNI
-  link: https://docs.intellect.run
+  link: https://uni.intellect.run
 - text: Контракты CORE
-  link: https://docs.intellect.run/unicore
+  link: https://core.intellect.run
 - text: Платформа DAO
-  link: https://docs.intellect.run/dao
-- text: Обозреватель
-  link: https://explorer.intellect.run
+  link: https://dao.intellect.run
+# - text: Обозреватель
+#   link: https://explorer.intellect.run
 - text: GitHub
   link: https://github.com/unicore
 
@@ -28,11 +28,11 @@ footer:
   copyright: "создано в DAO Коллективного Разума &copy; Copyright {{ year }}. All rights reserved."
   links:
     - text: UNI
-      link: https://docs.intellect.run
+      link: https://uni.intellect.run
     - text: UNICORE
-      link: https://docs.intellect.run/unicore
+      link: https://core.intellect.run
     - text: UNIDAO
-      link: https://docs.intellect.run/dao
+      link: https://dao.intellect.run
     
     # - text: GitHub
     #   link: https://github.com/unicore
